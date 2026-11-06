@@ -1,136 +1,169 @@
-# Stranger Things Social Media Analysis
+# 🎬 Stranger Things Social Media Analysis
 
-## Overview
+## 📌 Overview
 
-This project analyses audience sentiment and discussion themes across different seasons of *Stranger Things* using social media and review data from Reddit and IMDb.
+This project analyses audience sentiment, discussion themes, and engagement patterns across different seasons of *Stranger Things* using Reddit and IMDb data.
 
-The aim was to understand how audience perception changed over time, identify the topics viewers discussed most frequently, and compare sentiment patterns across seasons. The project combines text analytics, sentiment analysis, keyword extraction, topic modelling, and data visualisation to turn unstructured audience feedback into clear insights.
+The project was completed as part of the **Social Media Analysis** module in the MSc Business Analytics programme at Trinity College Dublin. The coursework required the use of intensive text analytics or image analysis techniques to generate business-relevant insights from social media data.
 
-## Objectives
+The analysis combines sentiment analysis, keyword analysis, LDA topic modelling, audience engagement analysis, character-level analysis, and brand matchmaking to explore how audience perception and discussion evolved across seasons.
 
-The analysis focused on questions such as:
+## 🎯 Objectives
 
-- How did audience sentiment change across different seasons of *Stranger Things*?
-- Which topics and themes appeared most frequently in online discussions?
-- Which seasons received the strongest or weakest audience reactions?
-- How did audience discussions evolve as the series progressed?
-- What insights can be extracted from large volumes of unstructured social media text?
+- How did audience sentiment change across different seasons?
+- Which seasons generated the strongest audience buzz and engagement?
+- What topics and keywords appeared most frequently in audience discussions?
+- Which characters attracted the most attention?
+- What recurring themes emerged from Reddit and IMDb text data?
+- How can audience insights be translated into potential brand or marketing opportunities?
 
-## Data Sources
+## 📊 Data Sources
 
 - **Reddit** — audience discussions and comments related to *Stranger Things*
-- **IMDb** — audience ratings and review-related information
+- **IMDb** — audience reviews, ratings, and related review information
 
-> Note: Raw data may not be included in this repository due to platform terms, privacy considerations, or file-size limitations.
+The repository includes data collection scripts as well as processed datasets used in the analysis.
 
-## Methods
+> Note: Data files are included for academic and portfolio demonstration purposes. Any platform-specific usage requirements should be respected when reusing the data.
 
-The project applied a range of text analytics and NLP techniques, including:
+## 🧠 Analytical Methods
 
-- Data cleaning and text preprocessing
-- Sentiment analysis
+- Data cleaning and preprocessing
+- Data merging and transformation
+- Exploratory data analysis
+- Rating vs. buzz comparison
+- Sentiment polarity analysis
 - Keyword and frequency analysis
-- Season-level comparison
 - LDA topic modelling
-- Topic interpretation
+- Character-level analysis
+- Brand matchmaking and business interpretation
 - Data visualisation
-- Audience insight generation
+- Cross-season comparison
 
-## Analytical Approach
+## 🔍 Analysis Workflow
 
-### 1. Data Preparation
+### 1. Data Collection
+Files:
+- `data_collection/imdb_scraper.py`
+- `data_collection/reddit_scraper.ipynb`
 
-Text data was cleaned and prepared for analysis by removing irrelevant content and standardising text for downstream NLP tasks.
+### 2. Data Cleaning and Integration
+File:
+- `analysis/01_data_cleaning_merge.py`
 
-### 2. Sentiment Analysis
+### 3. Rating vs. Buzz Analysis
+File:
+- `analysis/02_rating_vs_buzz.ipynb`
 
-Audience comments and reviews were analysed to identify positive, negative, and neutral sentiment patterns.
+### 4. Sentiment Analysis
+File:
+- `analysis/03_sentiment_polarity.ipynb`
 
-The results were compared across seasons to understand changes in audience perception over time.
+### 5. Topic Modelling
+File:
+- `analysis/04_lda_topic_modeling.ipynb`
 
-### 3. Keyword Analysis
+### 6. Keyword Analysis
+File:
+- `analysis/05_keywords.ipynb`
 
-Frequently occurring words and discussion terms were examined to identify the subjects receiving the most audience attention.
+### 7. Character Analysis
+File:
+- `analysis/06_character_analysis.ipynb`
 
-### 4. Topic Modelling
+### 8. Brand Matchmaking
+File:
+- `analysis/07_brand_matchmaking.ipynb`
 
-Latent Dirichlet Allocation (LDA) was used to identify recurring topics within audience discussions.
+## 💡 Key Takeaway
 
-The resulting topics were interpreted in the context of the series to understand the main themes driving online conversation.
+This project demonstrates how unstructured social media and review data can be transformed into structured audience insights.
 
-### 5. Cross-Season Comparison
+Rather than relying only on ratings, the analysis explores **why** audience reactions differ by examining sentiment, discussion volume, recurring topics, keywords, and character-level engagement.
 
-Sentiment, topics, and audience reactions were compared across seasons to identify changes in reputation and discussion patterns.
+It also shows how social media analytics can move beyond descriptive analysis toward business interpretation and marketing applications.
 
-## Key Takeaway
-
-The project demonstrates how unstructured social media and review data can be transformed into structured audience insights using NLP and statistical text analysis.
-
-Rather than relying only on overall ratings, the analysis explores *why* audience reactions differ by examining sentiment and recurring discussion themes.
-
-## Tech Stack
+## 🛠️ Tech Stack
 
 - Python
 - Pandas
 - NumPy
+- Jupyter Notebook
 - Natural Language Processing (NLP)
 - Sentiment Analysis
 - LDA Topic Modelling
+- Exploratory Data Analysis
 - Data Visualisation
 - Reddit data
 - IMDb data
+- Git / GitHub
 
-## Repository Structure
+## 📁 Repository Structure
 
 ```text
 stranger-things-social-media-analysis/
 │
 ├── README.md
+│
 ├── data/
-│   └── README.md
-├── notebooks/
-│   ├── 01_data_cleaning.ipynb
-│   ├── 02_sentiment_analysis.ipynb
-│   └── 03_topic_modelling.ipynb
-├── visuals/
-│   └── project_visualisations/
+│   ├── combined_data.csv
+│   ├── stranger_things_reddit.csv
+│   └── stranger_things_reviews.csv
+│
+├── data_collection/
+│   ├── imdb_scraper.py
+│   └── reddit_scraper.ipynb
+│
+├── analysis/
+│   ├── 01_data_cleaning_merge.py
+│   ├── 02_rating_vs_buzz.ipynb
+│   ├── 03_sentiment_polarity.ipynb
+│   ├── 04_lda_topic_modeling.ipynb
+│   ├── 05_keywords.ipynb
+│   ├── 06_character_analysis.ipynb
+│   └── 07_brand_matchmaking.ipynb
+│
+├── presentation/
+│   └── Stranger_Things_Social_Media_Analysis.pdf
+│
 └── requirements.txt
 ```
 
-The exact structure may vary depending on the final version of the project files.
+## 🎓 Academic Context
 
-## My Contribution
+This project was completed as a **group project** for the Social Media Analysis module within the MSc Business Analytics programme at Trinity College Dublin.
 
-This was completed as part of a university group project for Social Media Analysis.
+The project brief required teams to:
+- define a problem statement,
+- apply text or image analytics techniques,
+- explain the data and analytical approach,
+- interpret results critically,
+- and translate findings into business implications.
 
-My work contributed to the analytical workflow, interpretation of audience data, and development of insights from social media analysis.
+The final deliverable was presented as a group presentation.
 
-> Update this section before publishing if you want to describe your individual contribution in more detail.
+## 👤 My Contribution
 
-## Skills Demonstrated
+This repository is used as a portfolio representation of the group project.
 
-- NLP and text analytics
-- Sentiment analysis
-- Topic modelling
-- Working with unstructured data
-- Exploratory data analysis
-- Data visualisation
-- Translating analytical results into business-style insights
-- Communicating findings to non-technical audiences
+My contribution included participation in the analytical workflow, interpretation of social media data, development of insights, and presentation of findings.
 
-## Limitations
+> This section can be updated later with a more detailed breakdown of individual responsibilities.
+
+## ⚠️ Limitations
 
 - Social media users may not represent the full *Stranger Things* audience.
-- Online sentiment can be influenced by highly active users or specific events.
-- Topic modelling requires human interpretation when assigning meaning to topics.
-- Sentiment models may not always capture sarcasm, humour, or context accurately.
+- Reddit discussions may be influenced by highly active communities or specific events.
+- Sentiment models may not fully capture sarcasm, humour, or context.
+- Topic modelling requires human interpretation when assigning meaning to generated topics.
+- IMDb ratings and Reddit discussions represent different forms of audience engagement and should not be treated as directly equivalent measures.
 
-## Academic Context
+## 📎 Presentation
 
-This project was completed as part of the MSc Business Analytics programme at Trinity College Dublin.
+A PDF version of the final project presentation is included in the `presentation/` folder for a concise overview of the project story, analysis, findings, and business implications.
 
-## Author
+## 👩‍💻 Author
 
 **Bingbing (Ashlyn) Lin**  
 MSc Business Analytics, Trinity College Dublin  
-[LinkedIn](#) | [GitHub](#)
+GitHub: [Ashlyn150](https://github.com/Ashlyn150)
